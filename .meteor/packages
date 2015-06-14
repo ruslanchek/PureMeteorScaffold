@@ -1,0 +1,26 @@
+# Meteor packages used by this project, one per line.
+# Check this file (and the other files in this directory) into your repository.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+meteor-platform
+autopublish
+insecure
+cryptoquick:stylus-multi
+mquandalle:jade
+fortawesome:fontawesome
+digilord:faker
+iron:router
+numeral:numeral
+iamkevingreen:imagesloaded
+zimme:iron-router-active
+bevanhunt:leaflet
+dcsan:sly
+accounts-password
+accounts-ui
+accounts-facebook
+edgee:slingshot
+appshore:leaflet-awesome-markers
+herrhelms:meteor-leaflet-markercluster
+tap:i18n

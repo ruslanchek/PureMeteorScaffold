@@ -1,0 +1,50 @@
+@import 'jeet'
+@import url('http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic')
+
+body
+	font-family 'PT Sans', sans-serif
+	
+a
+	text-decoration none
+
+.header
+	height 48px
+	line-height 49px
+	background #374249
+	padding 0 30px
+	color #fff
+	
+	.logo
+		position relative
+		height 50px
+		padding 0 20px 0 40px
+		color #fff
+		font-size 18px
+		
+		&:after
+			height 12px
+			width 12px
+			display block
+			position absolute
+			left 7px
+			top 50%
+			box-sizing border-box
+			margin -7px 0 0 0
+			border 2px solid #4AA8B9
+			background #4AA8B9
+			content ''
+			border-radius 130px
+		
+		&:before
+			height 26px
+			width 26px
+			display block
+			position absolute
+			left 0
+			top 50%
+			box-sizing border-box
+			margin -14px 0 0 0
+			border 2px solid #4AA8B9
+			content ''
+			border-radius 130px
+			

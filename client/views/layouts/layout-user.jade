@@ -1,0 +1,10 @@
+template(name="layoutUser")
+	.app.section-offer.plain-page
+		+header
+		
+		main
+			ul.nav-h
+				li: a(href="#") {{_ "userNav.favorites"}}
+				li: a(href="#") {{_ "userNav.offers"}}
+				li: a(href="#") {{_ "userNav.settings"}}
+				li: a(href="#") {{_ "userNav.security"}}

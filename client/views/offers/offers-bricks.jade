@@ -1,0 +1,20 @@
+template(name="offersBricks")
+	.bricks
+		each this
+			+offersBrick
+			
+template(name="offersBrick")
+	a.item(href="{{pathFor 'offer'}}")
+		img.image(src="{{picture}}", alt="{{title}}")
+
+		.loading
+
+		.content
+			.desc
+				.price {{{convertPrice price}}}
+				.title {{address}}
+				.icons
+					if favorite
+						a.star.active(href="#"): i.fa.fa-star
+					else
+						a.star(href="#"): i.fa.fa-star-o
