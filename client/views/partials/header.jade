@@ -1,13 +1,3 @@
 template(name="header")
-	header
-		a.main-icon.search(href="#"): i.fa.fa-search
-
-		if isActiveRoute regex='map'
-			a.main-icon.map(href="/"): i.fa.fa-th-large
-		else
-			a.main-icon.map(href="{{pathFor 'mapFullscreen'}}"): i.fa.fa-map-marker
-
-		a.main-icon.star(href="#"): i.fa.fa-star-o
-		a.main-icon.menu.logout(href="#"): i.fa.fa-bars
-		
-		a.logo(href="/") {{_ "logo"}}
+	header.header
+		a.logo(href="/") OFFERS
