@@ -1,3 +1,26 @@
 {
-	
+	"logo": "Недвижка",
+
+	"userNav": {
+		"favorites": "Избранное",
+		"offers": "Размещенные объявления",
+		"settings": "Настройка",
+		"security": "Доступ и безопасность"
+	},
+
+	"offerParamKey": {
+		"internet": "Интернет",
+		"telephone": "Телефон",
+		"floor": "Этаж",
+		"bedrooms": "Количество спален",
+		"balcony": "Балкон",
+		"garage": "Гараж",
+		"waterpool": "Бассейн",
+		"floorsTotal": "Всего этажей"
+	},
+
+	"offerParamVal": {
+		"yes": "есть",
+		"no": "нет"
+	}
 }

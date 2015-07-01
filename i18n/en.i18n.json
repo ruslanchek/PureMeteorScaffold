@@ -1,3 +1,26 @@
 {
-	
+	"logo": "Realty",
+
+	"userNav": {
+		"favorites": "Favorites",
+		"offers": "Posted offers",
+		"settings": "Settings",
+		"security": "Security"
+	},
+
+	"offerParamKey": {
+		"internet": "Internet",
+		"telephone": "Telephone",
+		"floor": "Floor",
+		"bedrooms": "Bedrooms",
+		"balcony": "Balcony",
+		"garage": "Garage",
+		"waterpool": "Water pool",
+		"floorsTotal": "Floors total"
+	},
+
+	"offerParamVal": {
+		"yes": "yes",
+		"no": "no"
+	}
 }

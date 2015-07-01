@@ -5,23 +5,22 @@ template(name="offersBricks")
 			
 template(name="offersBrick")
 	.brick
-		.thumbnail.thumbnail-caption
-			a(href="{{pathFor 'offer'}}")
-				img.image(src="{{picture}}", alt="{{title}}")
+		a(href="{{pathFor 'offer'}}")
+			img.image(src="{{picture}}", alt="{{title}}")
 
-			.loading
+		.loading
 
-			.caption
-				h4.title 
-					a(href="{{pathFor 'offer'}}") {{address}}
-				p.price {{{convertPrice price}}}
+		.caption
+			h4.title {{address}}
+			p.desc {{desc}}
+			p.price {{{convertPrice price}}}
 
-				.icons
-					if favorite
-						a.btn.btn-primary.star(href="#")
-							i.fa.fa-star
-							|&nbsp;Like
-					else
-						a.btn.btn-default.star.btn-stroke(href="#")
-							i.fa.fa-star-o
-							|&nbsp;like
+			.icons
+				if favorite
+					a.btn.btn-primary.star(href="#")
+						i.fa.fa-star
+						|&nbsp;Like
+				else
+					a.btn.btn-default.star.btn-stroke(href="#")
+						i.fa.fa-star-o
+						|&nbsp;like
