@@ -1,10 +1,10 @@
 template(name="offersBricks")
-	.bricks
+	.bricks.grid.js-isotope(data-isotope-options='{ "itemSelector": ".grid-item", "masonry": { "columnWidth": 200 } }')
 		each this
 			+offersBrick
 			
 template(name="offersBrick")
-	.brick
+	.brick.grid-item
 		a(href="{{pathFor 'offer'}}")
 			img.image(src="{{picture}}", alt="{{title}}")
 
