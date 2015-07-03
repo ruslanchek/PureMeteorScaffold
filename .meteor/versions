@@ -89,5 +89,6 @@ underscore@1.0.3
 url@1.0.4
 webapp@1.2.0
 webapp-hashing@1.0.3
+zcurtis:uikit@2.21.2
 zimme:active-route@2.0.4
 zimme:iron-router-active@2.0.1

@@ -1,26 +1,23 @@
 template(name="offersBricks")
 	.bricks.grid.js-isotope(data-isotope-options='{ "itemSelector": ".grid-item", "masonry": { "columnWidth": 200 } }')
 		each this
-			+offersBrick
-			
-template(name="offersBrick")
-	.brick.grid-item
-		a(href="{{pathFor 'offer'}}")
-			img.image(src="{{picture}}", alt="{{title}}")
+			.brick.grid-item
+				a(href="{{pathFor 'offer'}}")
+					img.image(src="{{picture}}", alt="{{title}}")
 
-		.loading
+				.loading
 
-		.caption
-			h4.title {{address}}
-			p.desc {{desc}}
-			p.price {{{convertPrice price}}}
+				.caption
+					h4.title {{address}}
+					p.desc {{desc}}
+					p.price {{{convertPrice price}}}
 
-			.icons
-				if favorite
-					a.btn.btn-primary.star(href="#")
-						i.fa.fa-star
-						|&nbsp;Like
-				else
-					a.btn.btn-default.star.btn-stroke(href="#")
-						i.fa.fa-star-o
-						|&nbsp;like
+					.icons
+						if favorite
+							a.btn.btn-primary.star(href="#")
+								i.fa.fa-star
+								|&nbsp;Like
+						else
+							a.btn.btn-default.star.btn-stroke(href="#")
+								i.fa.fa-star-o
+								|&nbsp;like
