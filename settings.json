@@ -1,4 +1,17 @@
 {
+    "awsBucket": "my-example-staging",
     "AWSAccessKeyId": "AKIAJCDWQZ5TKJ2EHNYQ",
-    "AWSSecretAccessKey": "Mao/qGF50MME4VO08+AlVzK23y8/eXkd9CFji7TR"
+    "AWSSecretAccessKey": "Mao/qGF50MME4VO08+AlVzK23y8/eXkd9CFji7TR",
+
+    "public": {
+        "userDefaults": {
+            "mapLayer": "street",
+            "language": "en",
+            "valute": "rur"
+        },
+        "awsBucketUrl": "https://my-meteor-example.s3.amazonaws.com",
+        "persistent_session": {
+            "default_method": "persistent"
+        }
+    }
 }
