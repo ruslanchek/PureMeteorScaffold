@@ -13,7 +13,7 @@ template(name="layoutSearch")
 					+esEach(index="offers")
 						+offersBrick
 						
-					+esLoadMoreButton(index="offers")
+					+esLoadMoreButton(index="offers" howMany=12)
 					
 				+ifEsHasNoResults(index="offers")
 					p No results
