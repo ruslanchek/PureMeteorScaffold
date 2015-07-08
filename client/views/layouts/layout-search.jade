@@ -1,0 +1,22 @@
+template(name="layoutSearch")
+	.app.section-home.limiter
+		p {{this.offers}}
+		.main
+			form#search(action)
+				input#search-input
+				submit Go
+		
+			.bricks
+				+ifEsIsSearching(index="offers")
+					p Loading
+				else
+					+esEach(index="offers")
+						+offersBrick
+						
+					+esLoadMoreButton(index="offers")
+					
+				+ifEsHasNoResults(index="offers")
+					p No results
+					
+		.aside
+			p Rigth col

@@ -1,3 +1,3 @@
 App.collections = {};
 
-App.collections.offers = new Mongo.Collection('offers');
+App.collections.offers = new Meteor.Collection('offers');
