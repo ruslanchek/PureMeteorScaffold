@@ -1,11 +1,11 @@
 if (App.collections.offers.find().count() === 0) {
     Meteor.startup(function () {
-        _.each(_.range(100), function(){
+        _.each(_.range(200), function(){
             App.collections.offers.insert({
                 title: faker.lorem.sentence(),
                 desc: faker.lorem.paragraph(),
                 address: faker.address.city() + ', ' + faker.address.streetAddress(),
-                picture: 'http://lorempixel.com/400/400/city/?r=?rand=' + Math.random(),
+                picture: 'http://lorempixel.com/400/400/?r=?rand=' + Math.random(),
                 favorite: faker.random.array_element([true, false, false, false]),
                 price: faker.finance.amount() * 1000,
                 type: faker.random.array_element([1, 2, 3, 4]),

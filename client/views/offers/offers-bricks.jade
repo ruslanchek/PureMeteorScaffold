@@ -12,14 +12,16 @@ template(name="offersBrick")
 
 		.caption
 			h4.title {{address}}
-			p.price {{{convertPrice price}}}
+			p.desc {{desc}}
 
 			.icons
+				span.price {{{convertPrice price}}}
+
 				if favorite
-					a.btn.btn-primary.star(href="#")
+					a.btn.star(href="#")
 						i.fa.fa-star
 						|&nbsp;Like
 				else
-					a.btn.btn-default.star.btn-stroke(href="#")
+					a.btn.star(href="#")
 						i.fa.fa-star-o
-						|&nbsp;like
+						|&nbsp;Like

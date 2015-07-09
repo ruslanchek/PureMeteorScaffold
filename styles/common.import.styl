@@ -4,15 +4,77 @@ body
     min-width $min-width
     font-family "Roboto", sans-serif
     line-height 1.5em
+    color $body-color
 
 .limiter
-    width 960px
+    width 1200px
     margin 0 auto
     padding 0 20px
     box-sizing border-box
+    transition .15s
+
+    +below(1200px)
+        width 1000px
+
+    +below(1000px)
+        width 860px
 
     +below(600px)
         width 100%
 
 a
     color $color-blue
+    
+.load-more
+    height 60px
+    line-height 60px
+    display block
+    width 100%
+    text-align center
+    color #fff
+    background $color-green
+    font-size $font-size
+    border none
+    border-radius 5px
+    cursor pointer
+    
+    &:hover
+        background $color-green-dk
+    
+
+.btn
+    line-height 49px
+    height 50px
+    border 1px solid $color-blue
+    padding 0 18px 0 15px
+    border-radius 5px
+    color $color-blue 
+    font-weight bold
+    display inline-block
+    text-decoration none
+    min-width 100px
+    text-align center
+    transition .2s
+    
+    i
+        position relative
+        top 2px
+        font-size 25px
+    
+    &:hover
+        color #fff 
+        background $color-blue
+        
+.price
+    line-height 49px
+    height 50px
+    border 1px solid $color-gray-dk
+    padding 0 18px 0 15px
+    border-radius 5px
+    color $color-gray-dk - 20
+    font-weight bold
+    display inline-block
+    text-decoration none
+    min-width 100px
+    text-align center
+    transition .2s

@@ -2,18 +2,26 @@
 	cf()
 
 	.brick
-		col(1/4, cycle: 4, gutter: 0)
-
+		height $brick-height
 		background white
 		transition .15s
-
-		+below(600px)
-			col(1/1, cycle: 1, uncycle: 4, gutter: 0)
+		border 1px solid $color-gray-lt
+		border-radius 5px
+		margin-bottom 30px
+		position relative
+		padding 0 0 0 $brick-height
 
 		.image
 			display block
 			position relative
-			height 100px
+			border-radius 4px 0 0 4px
+			overflow hidden
+			position absolute
+			left 0
+			top 0
+			width $brick-height
+			height $brick-height
+			z-index 1
 
 			&:after
 				content ''
@@ -32,14 +40,29 @@
 			img
 				display block
 				width 100%
+				heigth 100%
 
 		.caption
-			padding 25px
+			float left
+			padding 40px
+			height $brick-height
+			box-sizing border-box
+			
+			.desc
+				margin-bottom 30px
+			
+			.title
+				font-size 35px
+				margin-bottom 30px
+				
+			.icons
+				.price
+					margin-right 30px
+				
 
 		&:hover
+			background $color-gray-lt
+			
 			.image
 				&:after
 					opacity 0
-
-			.caption
-				background #eee
