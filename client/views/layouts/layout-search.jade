@@ -2,9 +2,8 @@ template(name="layoutSearch")
 	.app.section-home.limiter
 		p {{this.offers}}
 		.main
-			form#search(action)
-				input#search-input
-				submit Go
+			form.search-form#search(action)
+				+esInput(index="offers" timeout=1000 allDocsOnEmpty=false reactive=false)
 		
 			.bricks
 				+ifEsIsSearching(index="offers")

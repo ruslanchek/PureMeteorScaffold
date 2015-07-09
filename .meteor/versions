@@ -66,6 +66,7 @@ mongo@1.1.0
 mongo-livedata@1.0.8
 mquandalle:jade@0.4.3
 mquandalle:jade-compiler@0.4.3
+multiply:iron-router-progress@1.0.1
 npm-bcrypt@0.7.8_2
 numeral:numeral@1.5.3
 oauth@1.1.4

@@ -1,6 +1,6 @@
 if (App.collections.offers.find().count() === 0) {
     Meteor.startup(function () {
-        _.each(_.range(200), function(){
+        _.each(_.range(100), function(){
             App.collections.offers.insert({
                 title: faker.lorem.sentence(),
                 desc: faker.lorem.paragraph(),

@@ -10,6 +10,10 @@
 		margin-bottom 30px
 		position relative
 		padding 0 0 0 $brick-height
+		
+		+below(600px)
+			padding 0
+			height auto
 
 		.image
 			display block
@@ -22,6 +26,12 @@
 			width $brick-height
 			height $brick-height
 			z-index 1
+			
+			+below(600px)
+				position relative
+				width 100%
+				height auto
+				left 0
 
 			&:after
 				content ''
@@ -43,10 +53,12 @@
 				heigth 100%
 
 		.caption
-			float left
 			padding 40px
 			height $brick-height
 			box-sizing border-box
+			
+			+below(600px)
+				height auto
 			
 			.desc
 				margin-bottom 30px

@@ -15,7 +15,7 @@ template(name="offersBrick")
 			p.desc {{desc}}
 
 			.icons
-				span.price {{{convertPrice price}}}
+				span.price(title="Price") {{{convertPrice price}}}
 
 				if favorite
 					a.btn.star(href="#")
