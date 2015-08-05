@@ -1,27 +1,27 @@
 Template.offersBrick.onRendered(function(e) {
 	var $item = $(this.firstNode);
 
-    $item.imagesLoaded(function(){
-		$item.addClass('loaded');
+	$item.imagesLoaded(function() {
+		$item.addClass('appear loaded');
 
-		setTimeout(function(){
-			$item.find('.loading').remove();
-		}, 400);
-    });
+		Meteor.setTimeout(function() {
+			$item.find('.loading-balls').remove();
+		}, 300);
+	});
 });
 
 Template.offersBrick.events({
-	'click .star': function (event) {
+	'click .star': function(event) {
 		var favorite = false;
 
-		if(this.favorite !== true){
+		if(this.favorite !== true) {
 			favorite = true;
 		}
 
 		App.collections.offers.update(this._id, {
-            $set: {
-                favorite: favorite
-            }
-        });
+			$set: {
+				favorite: favorite
+			}
+		});
 	}
 });

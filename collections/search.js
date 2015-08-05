@@ -1,3 +1,3 @@
-App.collections.offers.initEasySearch(['address', 'title'], {
+App.collections.offers.initEasySearch(['address', 'title', 'desc'], {
     limit: 12
 });

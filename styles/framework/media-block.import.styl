@@ -1,5 +1,12 @@
 .media-block
 	margin-bottom $default-spacing-unit
+	opacity 0
+	transform translateY(10%)
+
+	&.appear
+		opacity 1
+		transform translateY(0)
+		animation .5s fade-from-bottom
 
 	cf()
 
@@ -11,11 +18,26 @@
 		text-align center
 		line-height 1
 		vertical-align middle
+		min-height 130px
+		position relative
 
 		img
 			width 100%
 			display block
 			border-radius $border-radius
+			opacity 0
+			transform scale(0)
+			transition .2s
+			transition-delay .5s
+
+	&.loaded
+		opacity 1
+		transform translateY(0)
+
+
+		img
+			opacity 1
+			transform scale(1)
 
 	.media-block-body
 		@extend .grid .col-20

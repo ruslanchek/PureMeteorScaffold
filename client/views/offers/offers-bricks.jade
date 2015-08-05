@@ -4,24 +4,24 @@ template(name="offersBricks")
 			+offersBrick
 			
 template(name="offersBrick")
-	.brick
-		a.image(href="{{pathFor 'offer'}}")
-			img.image(src="{{picture}}", alt="{{title}}")
+	section.media-block
+		.media-block-thumb
+			.loading-balls
+			a(href="{{pathFor 'offer'}}")
+				img(src="{{picture}}", alt="{{address}}")
+		
+		.media-block-body
+			.date {{date}} {{{convertPrice price}}} {{address}}
 
-		.loading
+			h3 {{title}}
 
-		.caption
-			h4.title {{address}}
-			p.desc {{desc}}
-
-			.icons
-				span.price(title="Price") {{{convertPrice price}}}
-
-				if favorite
-					a.btn.star(href="#")
-						i.fa.fa-star
-						|&nbsp;Like
-				else
-					a.btn.star(href="#")
-						i.fa.fa-star-o
-						|&nbsp;Like
+			p {{desc}}
+			
+			//- if favorite
+			//- 	a.btn.star(href="#")
+			//- 		i.fa.fa-star
+			//- 		|&nbsp;Like
+			//- else
+			//- 	a.btn.star(href="#")
+			//- 		i.fa.fa-star-o
+			//- 		|&nbsp;Like
