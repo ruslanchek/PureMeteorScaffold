@@ -25,3 +25,20 @@ Template.offersBrick.events({
 		});
 	}
 });
+
+Template.offersBricks.onRendered(function(e) {
+	var $item = $(this.firstNode),
+		$thumbs = $item.find('.media-block-thumb');
+
+	$(window).on('resize.thumbs', function() {
+		$thumbs.css({
+			height: $thumbs.width()
+		});
+	});
+
+	$thumbs.css({
+		height: $thumbs.width()
+	});
+
+	console.log($thumbs);
+});

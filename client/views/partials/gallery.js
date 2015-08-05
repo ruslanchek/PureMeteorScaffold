@@ -1,17 +1,17 @@
 Template.gallery.onRendered(function(e) {
 	var $galleryContainer = $(this.firstNode),
 		$gallery = $galleryContainer.find('.gallery'),
-		$frame  = $galleryContainer.find('.frame'),
+		$frame = $galleryContainer.find('.frame'),
 		$slidee = $frame.children('ul').eq(0),
-		$wrap   = $frame.parent();
+		$wrap = $frame.parent();
 
-	$slidee.find('li').each(function(){
+	$slidee.find('li').each(function() {
 		var $frameItem = $(this);
 
-		$frameItem.find('img').on('load', function(){
+		$frameItem.find('img').on('load', function() {
 			$frameItem.addClass('loaded');
 
-			setTimeout(function(){
+			setTimeout(function() {
 				$frameItem.find('.loading').remove();
 			}, 400);
 		});
@@ -48,29 +48,29 @@ Template.gallery.onRendered(function(e) {
 		// nextPage: $wrap.find('.nextPage')
 	});
 
-	var resizeItems = function(){
-        var $items = $frame.find('ul li');
+	var resizeItems = function() {
+		var $items = $frame.find('ul li');
 
-        $items.css('width', $frame.width());
-        $items
-        	.add($frame)
-        	.add($gallery)
-        	.add($galleryContainer)
-        	.add($frame)
-        		.css('height', $frame.width());
-        		
-        $frame.sly('reload');
-    };
+		$items.css('width', $frame.width());
+		$items
+			.add($frame)
+			.add($gallery)
+			.add($galleryContainer)
+			.add($frame)
+			.css('height', (($frame.width() / 4) * 3));
+
+		$frame.sly('reload');
+	};
 
 	resizeItems();
 
 	var resizeTimeout;
 
-    $(window).on('resize', function(){
-    	clearTimeout(resizeTimeout);
-    	
-    	resizeTimeout = setTimeout(function(){
-    		resizeItems();
-    	}, 25);
-    });
+	$(window).on('resize.gallery', function() {
+		clearTimeout(resizeTimeout);
+
+		resizeTimeout = setTimeout(function() {
+			resizeItems();
+		}, 25);
+	});
 });

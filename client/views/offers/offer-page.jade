@@ -1,12 +1,9 @@
 template(name="offerPage")
-	// +loginButtons
-
 	.offer-heading
 		.left
-			h1 {{offer.address}}
+			h1 
+				|{{offer.address}}
 
-		.right
-			.icons
 				if offer.favorite
 					a.star.active(href="#"): i.fa.fa-star
 				else
