@@ -1,7 +1,10 @@
 template(name="layoutHome")
 	.app.section-home.limiter
-		.main
-			+offersBricks(offers)
-
-		.aside
-			p Rigth col
+		.block
+			.grid
+				.col-6
+					+asidePanel
+				
+				.col-18
+					+offersBricks(offers)
+					

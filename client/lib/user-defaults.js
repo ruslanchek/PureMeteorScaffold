@@ -1,7 +1,13 @@
-var userDefaults = Meteor.settings.public.userDefaults;
+var userDefaults = {
+    valute: 'rur',
+    language: 'en'
+};
 
-for(var item in userDefaults){
-    if(!Session.get(item)){
-        Session.set(item, userDefaults[item]);
+_.each(userDefaults, function(val, key){
+    if(!localStorage.getItem(key)) {
+        localStorage.setItem(key, val);
+        Session.set(key, val);
+    }else{
+        Session.set(key, localStorage.getItem(key));
     }
-}
+});
