@@ -5,11 +5,11 @@ if (App.collections.offers.find().count() === 0) {
 				title: faker.lorem.sentence(),
 				desc: faker.lorem.paragraph(),
 				address: faker.address.city() + ', ' + faker.address.streetAddress(),
-				picture: faker.image.imageUrl(),
+				picture: faker.image.imageUrl() + '?_=' + faker.random.number(1000000),
 				favorite: faker.random.array_element([true, false, false, false]),
 				price: faker.finance.amount() * 1000,
 				type: faker.random.array_element([1, 2, 3, 4]),
-                date: faker.date.past(),
+				date: faker.date.past(),
 				params: faker.random.array_element([
 					[
 						{ bedrooms: faker.random.array_element([1, 2, 3, 4]) },

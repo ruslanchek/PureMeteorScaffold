@@ -1,0 +1,3 @@
+AppRouteController = RouteController.extend({
+
+});
