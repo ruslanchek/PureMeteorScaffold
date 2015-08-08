@@ -1,6 +1,25 @@
 template(name="header")
 	header.header
 		.limiter
-			.block
-				h1 
-					|Limestone
+			.grid
+				.col-6
+					a.logo(href="/")
+
+				.col-10
+					.user
+						.item
+							a(href="/login") Log in
+							
+						.item
+							a(href="/login") Sign-up
+									
+				.col-8
+					.side
+						.item
+							a.btn.yellow.small(href="/place-ad") Place ad
+
+						.item
+							span.dropdown
+								.title
+									span.icon.flag-icon.flag-icon-gb
+									|English

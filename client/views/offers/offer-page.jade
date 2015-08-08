@@ -9,12 +9,12 @@ template(name="offerPage")
 				else
 					a.star(href="#"): i.fa.fa-star-o
 	
-	.offer-content
-		.content-left
+	.grid
+		.col-16
 			.gallery-content
 				+gallery
 
-		.content-right
+		.col-8
 			.price {{{convertPrice offer.price}}}
 			p {{offer.title}}
 			

@@ -5,7 +5,7 @@ if (App.collections.offers.find().count() === 0) {
 				title: faker.lorem.sentence(),
 				desc: faker.lorem.paragraph(),
 				address: faker.address.city() + ', ' + faker.address.streetAddress(),
-				picture: faker.image.imageUrl() + '?_=' + faker.random.number(1000000),
+				picture: faker.image.avatar(),
 				favorite: faker.random.array_element([true, false, false, false]),
 				price: faker.finance.amount() * 1000,
 				type: faker.random.array_element([1, 2, 3, 4]),
